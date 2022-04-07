@@ -1,0 +1,23 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  transition: all 300ms linear;
+}
+
+.App > h1 {
+  margin: 0;
+  padding: 1em;
+  text-align: center;
+  background: #333;
+  color: white;
+}
+
+section {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
