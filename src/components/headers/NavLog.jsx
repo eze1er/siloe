@@ -4,25 +4,11 @@ import React from "react";
 function NavLog() {
   return (
     <div className="NavLog">
-      <section>
-        <div>
-          <p>Ezechiel Windows TV</p>
-          <p>La Chaine TV de l'eglise Siloe</p>
-        </div>
-        <div>
-          <i>logo de la chaine</i>
-        </div>
-        <div>
-          <form action="submit">
-            <i>country flag</i>
-            <input type="text" />
-            <button></button>
-          </form>
-        </div>
-      </section>
 
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
+          <p>Ezechiel Windows TV</p>
+          <p>La Chaine TV de l'eglise Siloe</p>
           <a class="navbar-brand" href="#">
             Navbar
           </a>
