@@ -89,4 +89,4 @@ function NavLog() {
   );
 }
 
-export default App;
+export default NavLog;

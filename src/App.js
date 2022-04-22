@@ -1,10 +1,11 @@
 import './App.css';
-import 'bootstrap';
+import NavLog from './components/headers/NavLog';
 
 function App() {
+
   return (
     <div className="App">
-      This App!
+      <NavLog />
     </div>
   );
 }
