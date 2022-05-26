@@ -8,11 +8,11 @@ const server = http.createServer(app);
 // reel communication
 const io = socketio(server);
 
-app.get('./', (req, res) => {
+app.get('/', (req, res) => {
   res.json({result: 'ok'});
 })
 
-io.on('connection', (socket) => {
+io.on('connection', () => {
   console.log("Someone has connected");
 })
 
