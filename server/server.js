@@ -20,6 +20,11 @@ io.on('connection', (socket) => {
   socket.emit('INITIAL', {name, users});
   socket.emit('NEW_USER', {name});
   console.log("Someone has connected", name);
+  socket.name = name;
+
+  socket.on('disconnect', () => {
+    console.log('Someone is disconnected! ', socket.name);
+  })
 })
 
 
