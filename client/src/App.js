@@ -21,7 +21,7 @@ function App() {
 
     connection.on('NEW_USER', data => {
       console.log(data);
-      setUsers(data.users);
+      setUsers(prev => [...prev, data.name]);
     })
 
   }, [])
@@ -29,7 +29,7 @@ function App() {
   return (
     <div className="App">
      {user ? <h1>logged in as: {user}</h1> : <h1>Loading...</h1>}
-     {users.map(user => <li>{user}</li>)}
+     {users.map((user, i) => <li key={i}>{user}</li>)}
     </div>
   );
 }
