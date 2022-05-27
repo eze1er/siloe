@@ -13,6 +13,7 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.18.1",
+    "ikea-name-generator": "^1.0.3",
     "socket.io": "2.3.0"
   },
   "devDependencies": {
