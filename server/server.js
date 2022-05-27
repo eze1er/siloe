@@ -12,18 +12,21 @@ app.get('/', (req, res) => {
   res.json({result: 'ok'});
 
 })
-const users = [];
+let users = [];
 
 io.on('connection', (socket) => {
+  
   const name = ikea.getName();
+  console.log("Someone has connected", name);
   users.push(name);
   socket.emit('INITIAL', {name, users});
-  socket.emit('NEW_USER', {name});
-  console.log("Someone has connected", name);
+  socket.broadcast.emit('NEW_USER', {name});
   socket.name = name;
 
   socket.on('disconnect', () => {
     console.log('Someone is disconnected! ', socket.name);
+    socket.broadcast.emit('DISCONNECT_USER', {name: socket.name});
+    users.filter((name) => name !== socket.name);
   })
 })
 

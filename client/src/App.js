@@ -11,17 +11,19 @@ const connection = socketIoClient(ENDPOINT);
 function App() {
   const [user, setUser] = useState('');
   const [users, setUsers] = useState([])
+  
   useEffect(() => {
     connection.on('INITIAL', (data) => {
-      console.log("DATA");
-      console.log(data);
       setUser(data.name);
       setUsers(data.users);
     })
 
     connection.on('NEW_USER', data => {
-      console.log(data);
       setUsers(prev => [...prev, data.name]);
+    })
+
+    connection.on('DISCONNECT_USER', data => {
+      setUsers(prev => prev.filter(name => name !== data.name));
     })
 
   }, [])
@@ -29,7 +31,7 @@ function App() {
   return (
     <div className="App">
      {user ? <h1>logged in as: {user}</h1> : <h1>Loading...</h1>}
-     {users.map((user, i) => <li key={i}>{user}</li>)}
+     {users.map(user => <li>{user}</li>)}
     </div>
   );
 }
