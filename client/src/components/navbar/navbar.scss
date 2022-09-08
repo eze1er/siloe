@@ -4,8 +4,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  padding: 1rem 2rem;
+  flex-direction: row;
+  padding-right: 2rem;
   background: rgba(255, 255, 255, 0.25);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
@@ -14,18 +14,48 @@
   z-index: 2;
 }
 
+.bg-blue-gradient {
+  background: linear-gradient(
+    157.81deg,
+    #def9fa -43.27%,
+    #bef3f5 -21.24%,
+    #9dedf0 12.19%,
+    #7de7eb 29.82%,
+    #5ce1e6 51.94%,
+    #33bbcf 90.29%
+  );
+}
+
+:root {
+  --font-base: "DM Sans", sans-serif;
+
+  --primary-color: #edf2f8;
+  --secondary-color: #313bac;
+  --black-color: #030303;
+  --lightGray-color: #e4e4e4;
+  --gray-color: #6b7688;
+  --brown-color: #46364a;
+  --white-color: #ffffff;
+  --card-shadow: 0px 20px 100px -10px rgba(66, 71, 91, 0.1);
+
+  --black-gradient: linear-gradient(
+    144.39deg,
+    #ffffff -278.56%,
+    #6d6d6d -78.47%,
+    #11101d 91.61%
+  );
+}
+
 .app__navbar-logo {
   display: flex;
   justify-content: flex-start;
   align-items: center;
 
   img {
-    width: 90px;
-    height: 20px;
+    height: fit-content;
 
     @media screen  and (min-width: 200px) { 
-      width: 180px;
-      height: 40px;
+      height: 100px;
     }
   }
 }
@@ -52,7 +82,7 @@
     }
 
     a {
-      color: var(--gray-color);
+      color: var(--black-color);
       text-decoration: none;
       flex-direction: column;
 
@@ -103,11 +133,12 @@
     z-index: 5;
 
     padding: 1rem;
-    width: 80%;
-    height: 100%;
+    width: 60%;
+    height: 100vh;
 
     display: flex;
     justify-content: flex-end;
+    align-items: flex-end;
     flex-direction: column;
 
     background: url('../../assets/bgWhite.png');

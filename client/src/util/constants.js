@@ -1,0 +1,40 @@
+import MusicNoteIcon from '@mui/icons-material/MusicNote';
+import HomeIcon from '@mui/icons-material/Home';
+import CodeIcon from '@mui/icons-material/Code';
+import OndemandVideoIcon from '@mui/icons-material/OndemandVideo';
+import SportsEsportsIcon from '@mui/icons-material/SportsEsports';
+import LiveTvIcon from '@mui/icons-material/LiveTv';
+import SchoolIcon from '@mui/icons-material/School';
+import FaceRetouchingNaturalIcon from '@mui/icons-material/FaceRetouchingNatural';
+import CheckroomIcon from '@mui/icons-material/Checkroom';
+import GraphicEqIcon from '@mui/icons-material/GraphicEq';
+import TheaterComedyIcon from '@mui/icons-material/TheaterComedy';
+import FitnessCenterIcon from '@mui/icons-material/FitnessCenter';
+import DeveloperModeIcon from '@mui/icons-material/DeveloperMode';
+import ConnectedTvIcon from '@mui/icons-material/ConnectedTv';
+import LibraryMusicIcon from '@mui/icons-material/LibraryMusic';
+import HistoryIcon from '@mui/icons-material/History';
+
+export const logo = 'https://i.ibb.co/s9Qys2j/logo.png';
+
+export const categories = [
+  { name: 'Ezekiel-windows', icon:  <ConnectedTvIcon />, },
+  { name: 'Gospel', icon: <LibraryMusicIcon />, },
+  { name: "Archéologie-en-terre-d'Israël", icon: <HistoryIcon />, },
+
+];
+
+export const linkData = ["home",
+"about",
+"video",
+"youth",
+"testimonials",
+"contact",
+"donation"];
+
+export const demoThumbnailUrl = 'https://i.ibb.co/G2L2Gwp/API-Course.png';
+export const demoChannelUrl = '/channel/UCmXmlB4-HJytD7wek0Uo97A';
+export const demoVideoUrl = '/video/GDa8kZLNhJ4';
+export const demoChannelTitle = 'EKI Ezechiel 2022';
+export const demoVideoTitle = 'Build and Deploy 5 JavaScript & React API Projects in 10 Hours - Full Course | RapidAPI';
+export const demoProfilePicture = 'http://dergipark.org.tr/assets/app/images/buddy_sample.png'
